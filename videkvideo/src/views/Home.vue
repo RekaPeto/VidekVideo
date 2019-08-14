@@ -14,15 +14,14 @@
         },
         data() {
             return {
-        videos: []
-        }},
-        created(){
-            axios.get('https://jsonplaceholder.typicode.com/photos?_limit=5')
-                .then(res => this.videos = res.data)
-                .catch(err => Console.log(err));
-        }
+            videos: []
+            }},
+        created() {
+                 axios.get('https://jsonplaceholder.typicode.com/photos?_limit=5')
+                     .then(res => this.videos = res.data)
+                     .catch(err => Console.log(err));
+        }    
     }
-
 </script>
 
 <style>

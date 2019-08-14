@@ -3,7 +3,7 @@
         <h1>VidekVideo</h1>
         <div id="nav">
             <router-link to="/">Home</router-link> |
-            <router-link to="/about">About</router-link>
+            <router-link to="/upload">Upload</router-link>
         </div>
         <router-view />
     </div>
@@ -26,6 +26,7 @@
     body {
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.4;
+        background-color:azure
     }
 
     .btn {

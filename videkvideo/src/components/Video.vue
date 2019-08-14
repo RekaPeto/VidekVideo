@@ -1,7 +1,7 @@
 <template>
     <div>
-        <img :scr="video.url"  height="42" width="42">
-        <img :scr="video.thumbnailUrl"  height="42" width="42">
+        <img v-bind:src="video.url"  height="42" width="42">
+        <img v-bind:src="video.thumbnailUrl" >
         <h3>{{video.title}}</h3> 
     </div>
 </template>
