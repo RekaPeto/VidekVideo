@@ -1,7 +1,7 @@
 <template>
     <div>
         <a v-bind:href="video.url"><img v-bind:src="video.thumbnailUrl" class="img-thumbnail" ></a>
-        <a v-bind:href="video.url">{{video.title}}</a>
+        <a v-bind:href="video.StreamURL">{{video.title}}</a>
     </div>
 </template>
 

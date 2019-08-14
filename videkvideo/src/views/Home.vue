@@ -17,7 +17,7 @@
             videos: []
             }},
         created() {
-                 axios.get('https://jsonplaceholder.typicode.com/photos?_limit=5')
+                 axios.get('https://localhost:44301/api/Videos')
                      .then(res => this.videos = res.data)
                      .catch(err => console.log(err));
         }    
