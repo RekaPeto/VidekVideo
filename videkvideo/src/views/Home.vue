@@ -17,7 +17,7 @@
             videos: []
             }},
         created() {
-                 axios.get('https://localhost:44301/api/Videos')
+                 axios.get('https://localhost:44301/api/Thumbnail/')
                      .then(res => this.videos = res.data)
                      .catch(err => console.log(err));
         }    

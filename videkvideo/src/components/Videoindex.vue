@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-bind:key="video.id" v-for="video in videos">
+        <div v-bind:key="video.videoId" v-for="video in videos">
             <Video :video="video" />
         </div>
     </div>

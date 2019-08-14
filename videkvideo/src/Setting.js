@@ -1,0 +1,1 @@
+export const indexApiUrl ='https://localhost:44301/' 

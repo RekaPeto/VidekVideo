@@ -1,14 +1,14 @@
 <template>
     <div>
-        <a v-bind:href="video.url"><img v-bind:src="video.thumbnailUrl" class="img-thumbnail" ></a>
-        <a v-bind:href="video.StreamURL">{{video.title}}</a>
+        <a v-bind:href="'https://localhost:44301' + video.videoURL"><img v-bind:src="'https://localhost:44301' + video.thumbnailURL" class="img-thumbnail" ></a>
+        <a v-bind:href="video.videoURL">{{video.title}}</a>
     </div>
 </template>
 
 <script>
 export default {
   name: "video",
-  props: ["video"]
+  props: ["video"],
 }
 </script>
 
