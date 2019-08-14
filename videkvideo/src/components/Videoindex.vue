@@ -11,7 +11,7 @@ import Video from './Video.vue';
 export default {
   name: "videoindex",
   components: {
-    Video
+    Video,
   },
   props: ["videos"]
 }

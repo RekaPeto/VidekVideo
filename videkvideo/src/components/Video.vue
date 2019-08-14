@@ -1,8 +1,7 @@
 <template>
     <div>
-        <img v-bind:src="video.url"  height="42" width="42">
-        <img v-bind:src="video.thumbnailUrl" >
-        <h3>{{video.title}}</h3> 
+        <a v-bind:href="video.url"><img v-bind:src="video.thumbnailUrl" class="img-thumbnail" ></a>
+        <a v-bind:href="video.url">{{video.title}}</a>
     </div>
 </template>
 

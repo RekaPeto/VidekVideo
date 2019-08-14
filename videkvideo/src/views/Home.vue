@@ -1,16 +1,16 @@
 <template>
     <div id="app">
-        <Videoindex v-bind:videos="videos" />
+        <VideoGrid v-bind:videos="videos" />
     </div>
 </template>
 
 <script>
     import axios from 'axios';
-    import Videoindex from '../components/Videoindex';
+    import VideoGrid from '../components/VideoGrid';
     export default {
         name: 'Home',
         components: {
-            Videoindex
+            VideoGrid
         },
         data() {
             return {
@@ -19,7 +19,7 @@
         created() {
                  axios.get('https://jsonplaceholder.typicode.com/photos?_limit=5')
                      .then(res => this.videos = res.data)
-                     .catch(err => Console.log(err));
+                     .catch(err => console.log(err));
         }    
     }
 </script>
