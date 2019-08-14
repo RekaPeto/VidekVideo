@@ -1,5 +1,5 @@
 <template>
-    <Videoindex v-bind:videos="videos" />
+    <Videoindex v-bind:videos="videos"/>
 </template>
 
 <script>
@@ -13,5 +13,5 @@ import Videoindex from '../components/Videoindex';
 }
 </script>
 <style scoped>
-
+    
 </style>

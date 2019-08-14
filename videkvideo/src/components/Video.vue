@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <a v-bind:href="'https://localhost:44301' + video.videoURL"><img v-bind:src="'https://localhost:44301' + video.thumbnailURL" class="img-thumbnail" ></a>
-        <a v-bind:href="video.videoURL">{{video.title}}</a>
+    <div >
+        <router-link :to="'/Stream'" v-bind:VideoPath="IndexUrl + video.videoURL"><img v-bind:src="IndexUrl + video.thumbnailURL" class="img-thumbnail" width="210" height="120" ></router-link>
+        <router-link :to="'/Stream'" v-bind:VideoPath="IndexUrl + video.videoURL" id="Title">{{video.title}}</router-link>
     </div>
 </template>
 
@@ -9,6 +9,13 @@
 export default {
   name: "video",
   props: ["video"],
+  data: function() {
+       return {
+          IndexUrl: 'https://localhost:44301'
+        }
+    },
+    methods: {
+  }
 }
 </script>
 
@@ -19,20 +26,12 @@ export default {
         border-bottom: 1px #ccc dotted;
     }
 
-    .is-complete {
-        text-decoration: line-through;
+    img { 
+        display: block
     }
 
-    .del {
-        background: #ff0000;
-        color: #fff;
-        border: none;
-        padding: 5px 9px;
-        border-radius: 50%;
-        cursor: pointer;
-        float: right;
+    #title {
+        display: block
     }
-    img { 
-  display: inline-block;
-    }
+    
 </style>
