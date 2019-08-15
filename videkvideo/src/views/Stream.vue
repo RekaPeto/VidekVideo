@@ -1,9 +1,13 @@
 <template>
-    <div id="VidContainer">
-        <video controls :src="this.$data.IndexUrl + this.$data.videoAttr.streamURL" type="video/*">
-        </video>
+    <div>
+        <div id="VidContainer">
+            <div id="videvide">
+            <video controls :src="this.$data.IndexUrl + this.$data.videoAttr.streamURL" type="video/*">
+            </video>
             <h2>{{ videoAttr.title }}</h2>
             <p>{{ videoAttr.descirption }}</p>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -35,13 +39,25 @@ export default {
 <style scoped>
     video {
         height: 480 px;
-        width: 640px;
+        width: 100%;
         padding: 40px 0 10px 0;
+        display: block;
+        margin: 0 auto;
     }
     #VidContainer {
         text-align: center;
         text-align: left;
-        margin-left: 30%;
+        border: 20px;
+        padding: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+        background-color:rgba(105,105,105,0.5);
+    }
+
+    #videvide {
+        max-width: 640px;
+        padding: 40px 0 10px 0;
+        margin: 0 auto;
     }
     
     h2, p {
