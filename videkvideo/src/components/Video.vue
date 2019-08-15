@@ -1,7 +1,11 @@
 <template>
     <div >
-        <router-link :to="'/Stream'" v-bind:VideoPath="IndexUrl + video.videoURL"><img v-bind:src="IndexUrl + video.thumbnailURL" class="img-thumbnail" width="210" height="120" ></router-link>
-        <router-link :to="'/Stream'" v-bind:VideoPath="IndexUrl + video.videoURL" id="Title">{{video.title}}</router-link>
+        <router-link :to="{ name: 'stream', params: { videoPath: IndexUrl + video.videoURL }}">
+            <img v-bind:src="IndexUrl + video.thumbnailURL" class="img-thumbnail" width="210" height="120" >
+        </router-link>
+        <router-link :to="'stream'" v-bind:VideoPath="IndexUrl + video.videoURL" id="Title">
+            {{video.title}}
+        </router-link>
     </div>
 </template>
 
