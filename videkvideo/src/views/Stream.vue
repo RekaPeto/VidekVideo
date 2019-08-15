@@ -1,10 +1,9 @@
 <template>
-    <div>
-        <h1>Streaming service</h1>
-        <h1>{{videoPath}}</h1>
-        <h1>{{videoAttr}}</h1>
-        <video width="320" height="240" controls :src="this.$data.IndexUrl + this.$data.videoAttr.streamURL" type="video/*">
+    <div id="VidContainer">
+        <video controls :src="this.$data.IndexUrl + this.$data.videoAttr.streamURL" type="video/*">
         </video>
+            <h2>{{ videoAttr.title }}</h2>
+            <p>{{ videoAttr.descirption }}</p>
     </div>
 </template>
 
@@ -34,5 +33,25 @@ export default {
 
 </script>
 <style scoped>
+    video {
+        height: 480 px;
+        width: 640px;
+        padding: 40px 0 10px 0;
+    }
+    #VidContainer {
+        text-align: center;
+        text-align: left;
+        margin-left: 30%;
+    }
+    
+    h2, p {
+        color: white;
+    }
+
+    p {
+        font-style: italic;
+        padding: 0 0 0 40px
+    }
+
 
 </style>

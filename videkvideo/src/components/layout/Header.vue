@@ -21,6 +21,8 @@ export default {
     color: #fff;
     text-align: center;
     padding: 10px;
+    border-style: solid;
+    border-width: 0 0 5px 0;
   }
   .header a {
     color: #fff;
