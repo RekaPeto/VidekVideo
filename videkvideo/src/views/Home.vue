@@ -1,6 +1,8 @@
 <template>
     <div id="app">
+        <div id="container">
         <VideoGrid v-bind:videos="videos" />
+        </div>
     </div>
 </template>
 
@@ -32,6 +34,13 @@
         margin: 20px;
     }
 
+    #container {
+        border: 20px;
+        padding: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color:rgba(105,105,105,0.5);
+    }
     
 
     body {
@@ -39,14 +48,7 @@
         line-height: 1.4;
     }
 
-    .btn {
-        display: inline-block;
-        border: none;
-        background: #555;
-        color: #fff;
-        padding: 7px 20px;
-        cursor: pointer;
-    }
+    
 
         .btn:hover {
             background: #666;
