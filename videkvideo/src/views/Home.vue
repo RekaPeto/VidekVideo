@@ -14,22 +14,25 @@
         },
         data() {
             return {
-            videos: []
+            videos: [],
+            data: {indexUrl: 'https://localhost:44301'}
             }},
         created() {
-                 axios.get('https://localhost:44301/api/Videos')
+                 axios.get('https://localhost:44301/api/Thumbnail/')
                      .then(res => this.videos = res.data)
                      .catch(err => console.log(err));
         }    
     }
 </script>
 
-<style>
+<style scoped>
+
     * {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        margin: 20px;
     }
+
+    
 
     body {
         font-family: Arial, Helvetica, sans-serif;
@@ -48,4 +51,8 @@
         .btn:hover {
             background: #666;
         }
+    
+    div {
+        padding: 0 20px;
+    }
 </style>

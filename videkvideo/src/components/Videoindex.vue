@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div v-bind:key="video.id" v-for="video in videos">
+    <div >
+        <div v-bind:key="video.videoId" v-for="video in videos">
             <Video :video="video" />
         </div>
     </div>
@@ -18,4 +18,11 @@ export default {
 </script>
 
 <style scoped>
+div {
+
+    display: inline-block;
+    padding: 20px;
+    justify-content: left;
+    text-align: center
+  }
 </style>

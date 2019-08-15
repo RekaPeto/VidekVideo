@@ -1,32 +1,39 @@
 <template>
     <div id="app">
-        <h1>VidekVideo</h1>
-        <div id="nav">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/upload">Upload</router-link>
-        </div>
+        <Header />
         <router-view />
     </div>
 </template>
 
 <script>
+import Header from './components/layout/Header';
     export default {
-        name: "App"
+        name: "App",
+        components: {
+            Header
+    }
     }
 </script>
 
 
 <style>
-/* #app {
-   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    background-color:darkslategray
+  }
 
-@import'~bootstrap/dist/css/bootstrap.css'  */
 
+  a {
+    color: #fff;
+    padding-right: 5px;
+    text-decoration: none;
+  }
+  
  
 </style>
