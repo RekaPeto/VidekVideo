@@ -44,13 +44,13 @@
       <div v-if="isSuccess">
         <h2>Upload successful.</h2>
         <img
-          :src="'http://localhost:44301/' + uploadedFile.thumbnailURL"
+          :src="'http://localhost:44301/' + this.uploadedFile.thumbnailURL"
           class="img-responsive img-thumbnail"
         />
       </div>
       <!--FAILED-->
       <div v-if="isFailed">
-        <h2>Uploaded failed.</h2>
+        <h2>Upload failed.</h2>
         <p>
           <a href="javascript:void(0)" @click="reset()">Try again</a>
         </p>
@@ -63,6 +63,7 @@
 <script>
 import { upload } from "../file-upload.service"; // real service
 import { wait } from "../file-upload.service";
+import { constants } from 'crypto';
 const STATUS_INITIAL = 0,
   STATUS_SAVING = 1,
   STATUS_SUCCESS = 2,
@@ -110,6 +111,7 @@ export default {
         .then(x => {
           this.uploadedFile = x;
           this.currentStatus = STATUS_SUCCESS;
+          console.log(this.uploadedFile);
         })
         .catch(err => {
           this.uploadError = err.response;
@@ -119,7 +121,7 @@ export default {
     filesChange(fieldName, fileList) {
       // handle file changes
       const formData = new FormData();
-      if (!fileList.length || !title) return;
+      if (!fileList.length || !this.title) return;
       // append the files to FormData
       Array.from(Array(fileList.length).keys()).map(x => {
         formData.append(fieldName, fileList[x], fileList[x].name);
