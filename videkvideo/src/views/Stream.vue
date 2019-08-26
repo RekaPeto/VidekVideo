@@ -2,7 +2,7 @@
     <div>
         <div id="VidContainer">
             <div id="videvide">
-            <video controls :src="this.$data.IndexUrl + this.$data.videoAttr.streamURL" type="video/*">
+            <video controls :src="IndexUrl + '/api/video/' + this.$route.query.id + '/stream'" type="video/*">
             </video>
             <h2>{{ videoAttr.title }}</h2>
             <p>{{ videoAttr.descirption }}</p>
@@ -21,15 +21,13 @@ export default {
     },
     data(){
         return {
-            videoPath: this.$route.params,
             videoAttr: [],
             IndexUrl: 'https://localhost:44301'
         }
     },
         
     created() {
-        console.log("töltés");
-        axios.get(this.$data.videoPath.videoPath)
+        axios.get("https://localhost:44301/api/video/" + this.$route.query.id)
         .then(res => this.videoAttr = res.data)
         .catch(err => console.log(err));
         }

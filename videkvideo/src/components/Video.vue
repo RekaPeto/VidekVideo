@@ -1,6 +1,6 @@
 <template>
     <div >
-        <router-link :to="{ name: 'stream', params: { videoPath: IndexUrl + video.videoURL }}">
+        <router-link :to="{ name: 'stream', query: { id: video.videoId }}">
             <img v-bind:src="IndexUrl + video.thumbnailURL" class="img-thumbnail" width="210" height="120" >
         </router-link>
         <router-link :to="'stream'" v-bind:VideoPath="IndexUrl + video.videoURL" id="Title">
