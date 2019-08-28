@@ -24,6 +24,16 @@ export default new Router({
             path: '/stream',
             name: 'stream',
             component: () => import(/* webpackChunkName: "about" */ './views/Stream.vue')
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: () => import(/* webpackChunkName: "about" */ './views/Register.vue')
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: () => import(/* webpackChunkName: "about" */ './views/Login.vue')
         }
     ]
 })

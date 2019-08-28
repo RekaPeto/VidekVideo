@@ -4,7 +4,9 @@
     <h1>VidékiCSŐ</h1>
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/Upload">Upload</router-link>
+      <router-link to="/Upload">Upload</router-link> |
+      <router-link to="/Register">Register</router-link> |
+      <router-link to="/Login">Login</router-link>
     </div>
   </header>
 </template>
